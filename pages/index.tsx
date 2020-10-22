@@ -40,10 +40,10 @@ const App = () => {
             {!isPwa && isInstallSupport && userChoice !== null ? (
                 <button onClick={prompt}>Install</button>
             ) : null}
-            isPwa: {isPwa ? 'true' : 'false'}
-            isPwa: {isInstallSupport ? 'true' : 'false'}
-            {captureSrc ? <img src={captureSrc} /> : null}
             {supportShare ? <button onClick={share}>Share</button> : null}
+            isPwa: {isPwa ? 'true' : 'false'}
+            isInstallable: {isInstallSupport ? 'true' : 'false'}
+            {captureSrc ? <img src={captureSrc} /> : null}
         </main>
     )
 }

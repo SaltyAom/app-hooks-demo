@@ -1,7 +1,8 @@
 {
     "short_name": "app-hooks",
     "name": "app-hooks",
-    "start_url": "./index.html",
+    "start_url": "/",
+    "scope": "/",
     "icons": [
         {
             "src": "https://avatars1.githubusercontent.com/u/35027979?s=400&u=14ef5e79429dd79370dcf72b6fb457a9c1d93551&v=4",
@@ -14,7 +15,7 @@
             "type": "image/png"
         }
     ],
-    "display": "fullscreen",
-    "theme_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#ffffff",
     "background_color": "#ffffff"
 }
