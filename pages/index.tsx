@@ -24,7 +24,7 @@ const App = () => {
         audio: false
     })
 
-    let [prompt, userChoice, isInstallSupport] = useInstall()
+    // let [prompt, userChoice, isInstallSupport] = useInstall()
 
     let [capture, captureSrc] = useCaptureImage(videoRef)
 
@@ -37,12 +37,12 @@ const App = () => {
                 <button onClick={request}>Start</button>
             )}
             <button onClick={capture}>Capture</button>
-            {!isPwa && isInstallSupport && userChoice !== null ? (
+            {/* {!isPwa && isInstallSupport && userChoice !== null ? (
                 <button onClick={prompt}>Install</button>
-            ) : null}
+            ) : null} */}
             {supportShare ? <button onClick={share}>Share</button> : null}
             isPwa: {isPwa ? 'true' : 'false'}
-            isInstallable: {isInstallSupport ? 'true' : 'false'}
+            {/* isInstallable: {isInstallSupport ? 'true' : 'false'} */}
             {captureSrc ? <img src={captureSrc} /> : null}
         </main>
     )
