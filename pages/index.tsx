@@ -11,13 +11,15 @@ import {
 const App = () => {
     let videoRef = useRef()
 
-    // let [isPwa] = usePwa()
-    let isPwa = false
+    let [isPwa] = usePwa()
 
-    let [share, supportShare] = useShare()
-    // let [share, supportShare] = [() => {}, false]
+    let [share, supportShare] = useShare({
+        title: 'App Hooks demo',
+        text: 'Demo of using App Hooks to build PWA!',
+        url: 'https://app-hooks-demo.netlify.app'
+    })
 
-    let [request, stop, isPlaying, isAllow, stream] = useMedia(videoRef, {
+    let [request, stop, isPlaying] = useMedia(videoRef, {
         video: true,
         audio: false
     })
@@ -38,6 +40,8 @@ const App = () => {
             {!isPwa && isInstallSupport && userChoice !== null ? (
                 <button onClick={prompt}>Install</button>
             ) : null}
+            isPwa: {isPwa ? 'true' : 'false'}
+            isPwa: {isInstallSupport ? 'true' : 'false'}
             {captureSrc ? <img src={captureSrc} /> : null}
             {supportShare ? <button onClick={share}>Share</button> : null}
         </main>
